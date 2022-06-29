@@ -4,6 +4,7 @@ import math
 import pandas as pd
 import streamlit as st
 import spacy_streamlit
+import en_core_web_sm
 
 """
 # Welcome to Streamlit!
@@ -16,7 +17,8 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-models = ["en_core_web_sm"]
+# models = ["en_core_web_sm"]
+models = en_core_web_sm.load()
 default_text = "time is a flat circle"
 spacy_streamlit.visualize(models, default_text)
 
