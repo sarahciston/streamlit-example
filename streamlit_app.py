@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+import spacy_streamlit
 
 """
 # Welcome to Streamlit!
@@ -17,6 +18,11 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 
 with st.echo(code_location='below'):
+    
+    models = ["en_core_web_sm", "en_core_web_md"]
+    default_text = "time is a flat circle"
+    spacy_streamlit.visualize(models, default_text)
+
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
     num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
 
