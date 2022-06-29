@@ -2,4 +2,3 @@ altair
 pandas
 streamlit
 spacy-streamlit
-en_core_web_sm
